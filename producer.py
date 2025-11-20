@@ -3,10 +3,13 @@ import os
 import json
 import requests
 from datetime import datetime
+from dotenv import load_dotenv
+
+load_dotenv()  # Load environment variables from .env file
 
 KAFKA_BROKER = os.getenv("KAFKA_BROKER", "127.0.0.1:19092,127.0.0.1:29092,127.0.0.1:39092")
 #generated a github token
-GITHUB_TOKEN = "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"
+GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 # edit if we change repos
 REPO = "numpy/numpy"  
 # max allowed bit github      
@@ -34,6 +37,8 @@ class GitHubCommitProducer:
         self.session = requests.Session()
         if GITHUB_TOKEN:
             self.session.headers.update({"Authorization": f"Bearer {GITHUB_TOKEN}"})
+        else:
+            print("Warning: No GITHUB_TOKEN found.")
 
 # fetch commits from github api
     def fetch_commits_page(self, page: int):
