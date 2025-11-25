@@ -38,7 +38,7 @@ class GitHubCommitConsumer:
         #creates table and closes conn immediately to release lock
         conn = duckdb.connect(DB_PATH)
         conn.execute("""
-            CREATE TABLE IF NOT EXISTS commits (
+            CREATE OR REPLACE TABLE commits (
                 date TIMESTAMP,
                 sha TEXT,
                 author TEXT,

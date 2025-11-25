@@ -14,8 +14,7 @@ GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 REPO = "numpy/numpy"  
 # max allowed bit github      
 COMMITS_PER_PAGE = 100   
-#only fetch last year
-ONE_YEAR_AGO = (datetime.now(timezone.utc) - timedelta(days=365)).isoformat() 
+
 
 # initialize producer app and kafka topic
 class GitHubCommitProducer:
@@ -47,8 +46,7 @@ class GitHubCommitProducer:
     def fetch_commits_page(self, page: int):
         url = f"https://api.github.com/repos/{REPO}/commits"
         params = {"page": page, 
-                  "per_page": COMMITS_PER_PAGE,
-                  "since": ONE_YEAR_AGO}
+                  "per_page": COMMITS_PER_PAGE}
 
         r = self.session.get(url, params=params)
         r.raise_for_status()
@@ -121,7 +119,8 @@ class GitHubCommitProducer:
             date = commit_info.get("author", {}).get("date", "unknown")
             message = commit_info.get("message", "").split("\n")[0]  # first line
 
-            print(f"[{i+1}/{len(all_commits_buffer)}] {date} | {author}")
+            if i % 100 == 0:
+                print(f"[{i+1}/{len(all_commits_buffer)}] {date} | {author}")
             self.publish_to_kafka(commit)
 
 if __name__ == "__main__":

@@ -11,16 +11,17 @@ DB_FILE = "commits.duckdb"
 
 app = dash.Dash(__name__)
 app.layout = html.Div([
-    html.H1("Live GitHub Data Stream", style={'font-family': 'Arial', 'text-align': 'center'}),
+    html.H1("Numpy Github Repository Data Stream", style={'font-family': 'Arial', 'text-align': 'center'}),
     
     html.Div(id='counter-display', style={
-        'font-size': '80px', 
+        'font-size': '60px', 
         'text-align': 'center', 
         'color': '#0074D9', 
         'font-weight': 'bold',
-        'margin-top': '50px'
+        'margin-top': '30px',
+        'font-family': 'Arial'
     }),
-    html.Div("Commits Processed", style={'text-align': 'center', 'font-size': '20px', 'color': '#555'}),
+    html.Div("Commits Processed", style={'text-align': 'center', 'font-size': '20px', 'color': '#555', 'font-family': 'Arial'}),
 
     dcc.Graph(id='activity-graph', style={'marginBottom': '40px'}),
 
@@ -43,11 +44,11 @@ def update_dashboard(n):
         #time series
         df = conn.execute("""
             SELECT 
-                date_trunc('day', date) AS day_bucket,
+                date_trunc('month', date) AS month_bucket,
                 COUNT(DISTINCT sha) AS commit_count
             FROM commits
-            GROUP BY day_bucket
-            ORDER BY day_bucket ASC
+            GROUP BY month_bucket
+            ORDER BY month_bucket ASC
                           """).df()
         
         #top authors
@@ -65,13 +66,13 @@ def update_dashboard(n):
 
         if df.empty:
             empty_fig = px.line(title="Waiting for data...")
-            return "0", empty_fig
+            return "0", empty_fig, {}
         
         total_commits = df['commit_count'].sum()
 
         fig_line = px.line(
             df, 
-            x='day_bucket', 
+            x='month_bucket', 
             y='commit_count', 
             title="Commit Frequency Over Time",
             markers=True
@@ -79,7 +80,7 @@ def update_dashboard(n):
         
         fig_line.update_layout(
             xaxis_title="Date", 
-            yaxis_title="Commits per Day",
+            yaxis_title="Commits per Month",
             template="plotly_white"
         )
         fig_bar = px.bar(
