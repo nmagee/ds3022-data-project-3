@@ -8,7 +8,7 @@
 
 **What data source did you work with?**
 
-- OpenSky API
+- OpenSky API (https://openskynetwork.github.io/opensky-api/rest.html#all-state-vectors)
   - Used the /states/all endpoint to poll real-time aircraft state vectors, including position, altitude, velocity, and metadata. This endpoint was queried repeatedly to build the flight dataset.
 
 - ESRI ArcGIS Airspace Boundaries API
