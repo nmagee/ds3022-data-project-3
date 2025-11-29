@@ -34,6 +34,8 @@
 
 **Offer a brief analysis of the data with your findings. Keep it to one brief, clear, and meaningful paragraph.**
 
+&emsp;Due to the effect the government shutdown had on the efficiency of air travel, and the fact that I recently learned how the U.S airspace functions beyond ATC Towers, I decided to analyze the incoming and outgoing traffic of Air Route Traffic Control Centers (ARTCCs), which coordinate travel through U.S. en route airspace, managing flights as they fly from one airport to another.
+
 
 ## Plot / Visualization
 
