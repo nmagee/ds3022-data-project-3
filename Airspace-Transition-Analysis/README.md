@@ -1,4 +1,4 @@
-# Team Airspace Transition Analysis
+# Airspace Transition Analysis
 
 ## Team members
 - Brian Hockett (mgh2xx)
