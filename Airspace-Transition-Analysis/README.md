@@ -12,7 +12,7 @@
   - Used the /states/all endpoint to poll real-time aircraft state vectors, including position, altitude, velocity, and metadata. This endpoint was queried repeatedly to build the flight dataset.
 
 - ESRI ArcGIS Airspace Boundaries API
-  - Queried once via the ArcGIS FeatureServer query operation to retrieve static U.S. airspace boundary geometry and attributes in GeoJSON.
+  - Queried once via the ArcGIS FeatureServer query operation to retrieve static U.S. airspace boundary geometry and attributes in GeoJSON. Used for enrichment of flight dataset and expanded analysis.
 
 
 ## Challenges / Obstacles
