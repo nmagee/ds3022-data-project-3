@@ -3,7 +3,6 @@
 ## Team members
 - Brian Hockett (mgh2xx)
 
-
 ## Data Source
 
 **What data source did you work with?**
@@ -29,13 +28,11 @@
 
 &emsp;The only challenges I faced in the analysis step were in working with geographic data. I had never visualized geographic data in python before, so I had to learn how to use the geopandas and cartopy libraries to make my visualizations and conduct my analysis.
 
-
 ## Analysis
 
 **Offer a brief analysis of the data with your findings. Keep it to one brief, clear, and meaningful paragraph.**
 
-&emsp;Due to the effect the government shutdown had on the efficiency of air travel, and the fact that I recently learned how the U.S airspace functions beyond ATC Towers, I decided to analyze the incoming and outgoing traffic of Air Route Traffic Control Centers (ARTCCs), which coordinate travel through en-route airspace, managing flights as they fly from one airport to another.
-
+&emsp;Due to the effect the government shutdown had on the efficiency of air travel, I decided to analyze the incoming and outgoing traffic of Air Route Traffic Control Centers (ARTCCs), which coordinate travel through en-route airspace in an attempt to identify where specific regions of the National Airspace System (NAS) would have been disproportionately affected and been in need of additional staffing or resource allocation to maintain safe and efficient traffic flow. Initially, I analyzed the total volume of aircrafts in specific ARTCC regions at a given time, and found the highest density of aircrafts in the Florida (ZMA, ZJX), Atlanta (ZTL), and DC (ZDC) regions. Because one of ARTCCs' major responsibilities is handing off aircrafts between regions, I decided to extend this analysis to be more dyanamic. First, I visualized the density of all aircraft positions over the course of the full timespan, which showed the most common flight paths taken. Then, I calculated the transfer rate (aircraft entrances + exits per hour) normalized by land area for each region. This yielded more interesting results, with the New York (ZNY) ARTCC having the highest normalized transfer rate of any region. Despite the higher density of aircrafts in other regions, the ZNY airspace had the highest transfer demand, likely due to their control of the majority of the airspace over the Atlantic Ocean, meaning they controlled incoming international travel, as well as travel into and out of New York City. Surprsingly, the Atlanta (ZTL) airspace did not stand out from others on the eastern half of the U.S, despite containing the busiest airport in the U.S, Hartsfield-Jackson Atlanta International Airport (ATL). Finally, I created a Streamlit application which visualizes the incoming and outgoing traffic for a selected ARTCC region, to give an idea of the actual per minute rate at which ARTCC controllers must transfer responsibility of aircrafts.
 
 ## Plot / Visualization
 
@@ -55,9 +52,6 @@
     <td><img src="Planes_by_Airspace.png" width="1250"/></td>
   </tr>
 </table>
-
-
-
 
 ## GitHub Repository
 
