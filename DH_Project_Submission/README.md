@@ -1,8 +1,8 @@
-# Team Hill
+# Team Hill/Garozzo
 
 ## Team members
 
-Dylan Hill
+Dylan Hill and Ben Garozzo
 
 ## Data Source
 
