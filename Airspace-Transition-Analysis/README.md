@@ -41,7 +41,20 @@
 
 **Include at least one compelling plot or visualization of your work. Add images in your subdirectory and then display them using markdown in your README.md file.**
 
-
+<table>
+  <tr>
+    <td><img src="StreamlitApp.png" width="1250"/></td>
+  </tr>
+  <tr>
+    <td><img src="Cruising_Density.png" width="1250"/></td>
+  </tr>
+  <tr>
+    <td><img src="Traffic_Density.png" width="1250"/></td>
+  </tr>
+  <tr>
+    <td><img src="Planes_by_Airspace.png" width="1250"/></td>
+  </tr>
+</table>
 
 
 
