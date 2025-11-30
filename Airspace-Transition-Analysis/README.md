@@ -43,16 +43,16 @@
 
 <table>
   <tr>
-    <td><img src="StreamlitApp.png?v=2" width="1250"/></td>
+    <td><img src="StreamlitApp.png?v=3" width="1250"/></td>
   </tr>
   <tr>
-    <td><img src="Cruising_Density.png?v=2" width="1250"/></td>
+    <td><img src="Cruising_Density.png?v=3" width="1250"/></td>
   </tr>
   <tr>
-    <td><img src="Traffic_Density.png?v=2" width="1250"/></td>
+    <td><img src="Traffic_Density.png?v=3" width="1250"/></td>
   </tr>
   <tr>
-    <td><img src="Planes_by_Airspace.png?v=2" width="1250"/></td>
+    <td><img src="Planes_by_Airspace.png?v=3" width="1250"/></td>
   </tr>
 </table>
 
