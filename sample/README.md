@@ -36,11 +36,11 @@ For our analysis, we compared sentiment analysis on the top 5 tech moguls compar
 
 This first graph shows the number of posts per sentiment for each of the six tech moguls we chose to analyze. 
 
-<img src="./mogul_sentiment.jpg" width="600" height="400>
+<img src="./mogul_sentiment.jpg" width="600" height="400">
 
 This second graph shows the number of posts per sentiment for each of the tech moguls' respective companies, or one of their most well-known companies.
 
-<img src="./company_sentiment.jpg" width="600" height="400> 
+<img src="./company_sentiment.jpg" width="600" height="400"> 
 
 
 ## GitHub Repository
