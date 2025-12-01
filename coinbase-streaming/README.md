@@ -2,11 +2,12 @@
 
 ## Team members
 
+Mason Nicoletti
 
 
 ## Data Source
 
-What data source did you work with?
+I used the **Coinbase Market Data Websocket**. By subscribing to the live exchange feed, I was able to stream every transaction made on several cryptocurrencies that I specified as channels.
 
 
 ## Challenges / Obstacles
@@ -25,4 +26,4 @@ Include at least one compelling plot or visualization of your work. Add images i
 
 ## GitHub Repository
 
-https://github.com/
+https://github.com/masonnicoletti/coinbase-streaming
