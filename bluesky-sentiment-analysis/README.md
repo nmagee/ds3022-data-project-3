@@ -7,7 +7,8 @@ Iliana Vasslides and Claire Bassett
 ## Data Source
 
 *What data source did you work with?*
-We continued to work with the BlueSky firehose for our data source. 
+
+We continued to work with the BlueSky firehose API for our data source. 
 
 
 ## Challenges / Obstacles
