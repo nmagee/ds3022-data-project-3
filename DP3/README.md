@@ -13,7 +13,7 @@ The NBA API
 
 What challenges did this data choice present in data gathering, processing and analysis, and how did you work through them? What methods and tools did you use to work with this data?
 
-Working with this API, I had to familiarize myself with how the data was set up and excatly what I wanted to look at. This look a lot of googling, looking at others work, and using some Large Language models as a launching point to get started with the data. To work with this data I used prefect to ingest it and duckdb to store and perform transformations on it. Python was used for visualizations, specifically matplotlib and seaborn. 
+Working with this API, I had to familiarize myself with how the data was set up and excatly what I wanted to look at. This look a lot of googling, looking at others work, and using some Large Language models as a launching point to get started with the data. The NBA API was also pretty unstable. I had to work around timeout issues when getting data, by including try and excepts for timeout errors. Also, the NBA API requires strong headers because it expects browser traffic not scripts, so I had to use headers that would match chrome traffic. To work through this, I added a dictionary of the strong headers necessary for this to work. To work with this data I used prefect to ingest it and duckdb to store and perform transformations on it. Python was used for visualizations, specifically matplotlib and seaborn. 
 
 ## Analysis
 
