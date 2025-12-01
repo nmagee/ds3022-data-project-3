@@ -1,13 +1,13 @@
-# Team Coco
+# Team Corinne
 
 ## Team members
-
+Corinne Fogarty
 
 
 ## Data Source
 
 What data source did you work with?
-
+The NBA API
 
 ## Challenges / Obstacles
 
