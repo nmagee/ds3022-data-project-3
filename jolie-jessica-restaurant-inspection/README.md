@@ -25,6 +25,9 @@ Overall, the inspection property data shows that restaurant safety in NYC is une
 
 Below are some of our key visualizations from our analysis:
 
+- Average inspection scores by cuisine type for the riskiest cuisines in our sample:  
+  ![Cuisine Performance](plots/plot_1_cuisine_performance.png)
+
 - Borough safety comparison (average scores, critical violation rates, grade mix, and restaurant counts):  
   ![NYC Borough Safety Comparison](plots/plot_2_borough_comparison.png)
 
@@ -36,9 +39,6 @@ Below are some of our key visualizations from our analysis:
 
 - Top 10 most common violations across NYC restaurants:  
   ![Top Violations](plots/plot_5_top_violations.png)
-
-- Average inspection scores by cuisine type for the riskiest cuisines in our sample:  
-  ![Cuisine Performance](plots/plot_1_cuisine_performance.png)
 
 ## Github Repository
 
