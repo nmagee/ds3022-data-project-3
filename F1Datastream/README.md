@@ -18,6 +18,7 @@ One key challenge was the instability and rate limiting of the FastF1 and underl
 
 ## Plot / Visualization
 
+<img width="2185" height="1677" alt="track_evolution_analysis" src="https://github.com/user-attachments/assets/df94504d-2f58-4301-9e32-c85312b8da2a" />
 
 
 ## GitHub Repository to Code
