@@ -2,7 +2,8 @@
 
 ## Data Source
 
-Fast-F1: a python package used to access and analyze Formula 1 Data, including current and historical data. It includes F1 timing data, telemetry, sessions results and more. 
+Fast-F1 is a python package used to access and analyze Formula 1 Data, including current and historical data. It includes F1 timing data, telemetry, sessions results. 
+
 The Fast-F1 data allows us to look at data by wrapping the unofficial F1 Live Timing APIs. It downloads raw session data, caches it locally, and exposes clean objects for laps, telemetry channels, track status, and driver metadata. The package handles API quirks, missing packets, and synchronization automatically, giving analysts consistent, high-resolution data without manual scraping. It is useful as a data stream because it provides reproducible, machine-readable session information with built-in caching, reliable timing alignment, and a stable interface for analytics, modeling, and visualization. We accessed this using a prefect flow, then storing in a duckdb database for analysis. We thought this would be a strong data source as it high volume and mostly consistent, with for our experimentation we pulled over 100k data points. 
 
 https://docs.fastf1.dev/#
