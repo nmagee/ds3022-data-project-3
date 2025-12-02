@@ -1,7 +1,0 @@
-websockets
-quixstreams
-boto3
-pandas
-transformers
-torch
-matplotlib
