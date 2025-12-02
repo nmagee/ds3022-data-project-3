@@ -20,12 +20,11 @@ Over the three-minute collection window, the OpenSky API returned about 89,000 c
 
 ## Plot / Visualization
 
-![Top Countries](plots/top_countries.png)
+![Top Countries](visualizations/top_countries.png)
 
-![Speed Histogram](plots/speed_histogram.png)
+![Speed Histogram](visualizations/speed_histogram.png)
 
-![Aircraft Over Time](plots/aircraft_over_time.png)
-
+![Aircraft Over Time](visualizations/aircraft_over_time.png)
 ## GitHub Repository
 
 https://github.com/margauxreynolds/opensky-flights-analysis
