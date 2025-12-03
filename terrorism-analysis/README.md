@@ -5,6 +5,8 @@
 ### Data Source
 Global Terrorism Database (GTD):
 https://www.start.umd.edu/data-tools/GTD
+NewsAPI:
+https://newsapi.org/
 
 
 ### Codebook
