@@ -26,19 +26,19 @@ Offer a brief analysis of the data with your findings. Keep it to one brief, cle
 ## Plot / Visualization
 
 Include at least one compelling plot or visualization of your work. Add images in your subdirectory and then display them using markdown in your README.md file.
-![All performance chart](sample/visualizations/All_performance.png)
+![All performance chart](visualizations/All_performance.png)
 *Figure 1: Normalized performance across the sample.*
 
-![Current vs 2008](sample/visualizations/current_vs_2008.png)
+![Current vs 2008](visualizations/current_vs_2008.png)
 *Figure 2: Current period vs 2008 comparison.*
 
-![Drawdown analysis](sample/visualizations/drawdown_analysis.png)
+![Drawdown analysis](visualizations/drawdown_analysis.png)
 *Figure 3: Drawdown comparison across crisis periods.*
 
-![Market volatility](sample/visualizations/market_volatility.png)
+![Market volatility](visualizations/market_volatility.png)
 *Figure 4: Rolling volatility over time.*
 
-![Recession comparison](sample/visualizations/recession_comparison.png)
+![Recession comparison](visualizations/recession_comparison.png)
 *Figure 5: Recession period comparisons.*
 
 
