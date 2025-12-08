@@ -19,6 +19,7 @@ Review and [vote](https://forms.gle/1M3AMaYfkA7QeEuD9) for your top three projec
 - [madireddy](./madireddy/)
 - [maya-uwaydat](./maya-uwaydat/)
 - [nytimes-anaya](./nytimes-anaya/)
+- [nyt-analysis-ben+dylan](./nyt-analysis-ben+dylan/)
 - [opensky-aircraft-analysis](./opensky-aircraft-analysis/)
 - [skyblue](./skyblue/)
 - [spotify-workout-playlists](./spotify-workout-playlists/)
