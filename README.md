@@ -13,6 +13,7 @@ Review and [vote](https://forms.gle/1M3AMaYfkA7QeEuD9) for your top three projec
 - [elaine_anna](./elaine_anna/)
 - [f1-datastream](./f1-datastream/)
 - [fda-recalls](./fda-recalls/)
+- [finance-trades-analysis](./finance-trades-analysis/)
 - [gharchive-events-analysis](./gharchive-events-analysis/)
 - [humanoid_sentiment_analysis](./humanoid_sentiment_analysis/)
 - [jolie-jessica-restaurant-inspection](./jolie-jessica-restaurant-inspection/)
