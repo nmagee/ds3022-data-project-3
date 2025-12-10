@@ -1,4 +1,4 @@
-# Team CocoPuff
+# Team Coco Puff and Stuff
 
 ## Team members
 
