@@ -24,7 +24,12 @@ jobs:
       - name: Fail if forbidden files are changed
         if: steps.changed-files.outputs.any_changed == 'true'
         run: |
+          echo "------------------------------------------------------------------"
           echo "Error: The following forbidden files were modified in this PR:"
+          echo " "
           echo "${{ steps.changed-files.outputs.modified_files }}"
-          echo "Unstage changes to those files, then add/commit/push and resubmit."
+          echo " "
+          echo "Unstage your changes to those files, then add/commit/push and "
+          echo "resubmit your PR."
+          echo "------------------------------------------------------------------"
           exit 1
