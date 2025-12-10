@@ -1,0 +1,30 @@
+name: Prevent Unauthorized File Changes
+
+on:
+  pull_request:
+    branches:
+      - main # Or your main branch name
+
+jobs:
+  check_for_forbidden_changes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Fetch all history to compare against the base branch
+
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v40 # Use a specific version of the action
+        with:
+          files: |
+            sample/README.md
+
+      - name: Fail if forbidden files are changed
+        if: steps.changed-files.outputs.any_changed == 'true'
+        run: |
+          echo "Error: The following forbidden files were modified in this PR:"
+          echo "${{ steps.changed-files.outputs.modified_files }}"
+          echo "Unstage changes to those files, then add/commit/push and resubmit."
+          exit 1
