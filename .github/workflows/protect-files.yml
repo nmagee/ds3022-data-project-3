@@ -19,6 +19,7 @@ jobs:
         uses: tj-actions/changed-files@v40 # Use a specific version of the action
         with:
           files: |
+            README.md
             sample/README.md
 
       - name: Fail if forbidden files are changed
@@ -32,7 +33,6 @@ jobs:
           echo "Unstage your changes to those files, then add/commit/push and "
           echo "resubmit your PR."
           echo "------------------------------------------------------------------"
-          exit 1
 
       - name: Create Comment
         if: steps.changed-files.outputs.any_changed == 'true'
@@ -44,3 +44,5 @@ jobs:
           COMMENT_URL="https://api.github.com/repos/${{ github.repository }}/issues/${PR_NUMBER}/comments"
 
           curl -s -H "Authorization: token ${GHCR_TOKEN}" -X POST $COMMENT_URL -d "{\"body\":\"$COMMENT\"}"
+          exit 1
+
