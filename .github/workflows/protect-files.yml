@@ -33,3 +33,14 @@ jobs:
           echo "resubmit your PR."
           echo "------------------------------------------------------------------"
           exit 1
+
+      - name: Post a dynamic comment
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: "The workflow run for this PR has finished with status: **${{ job.status }}**."
+            })
