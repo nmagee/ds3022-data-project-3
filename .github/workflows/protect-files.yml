@@ -33,16 +33,5 @@ jobs:
           echo "Unstage your changes to those files, then add/commit/push and "
           echo "resubmit your PR."
           echo "------------------------------------------------------------------"
-
-      - name: Create Comment
-        if: steps.changed-files.outputs.any_changed == 'true'
-        run: |
-          # Use GitHub API to create a comment on the PR
-          PR_NUMBER=${{ github.event.pull_request.number }}
-          COMMENT="Your Pull Request has been rejected.\n\nThe following files were changed that should be reset to their initial state:\n\n${{ steps.changed-files.outputs.modified_files }}"
-          GITHUB_TOKEN=${{ secrets.GHCR_TOKEN }}
-          COMMENT_URL="https://api.github.com/repos/${{ github.repository }}/issues/${PR_NUMBER}/comments"
-
-          curl -s -H "Authorization: token ${GHCR_TOKEN}" -X POST $COMMENT_URL -d "{\"body\":\"$COMMENT\"}"
           exit 1
 
