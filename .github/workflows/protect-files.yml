@@ -34,13 +34,13 @@ jobs:
           echo "------------------------------------------------------------------"
           exit 1
 
-      - name: Post a dynamic comment
-        uses: actions/github-script@v6
-        with:
-          script: |
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: "The workflow run for this PR has finished with status: **${{ job.status }}**."
-            })
+      - name: Create Comment
+        if: steps.changed-files.outputs.any_changed == 'true'
+        run: |
+          # Use GitHub API to create a comment on the PR
+          PR_NUMBER=${{ github.event.pull_request.number }}
+          COMMENT="Your Pull Request has been rejected.\n\nThe following files were changed that should be reset to their initial state:\n\n${{ steps.changed-files.outputs.modified_files }}"
+          GITHUB_TOKEN=${{ secrets.GHCR_TOKEN }}
+          COMMENT_URL="https://api.github.com/repos/${{ github.repository }}/issues/${PR_NUMBER}/comments"
+
+          curl -s -H "Authorization: token ${GHCR_TOKEN}" -X POST $COMMENT_URL -d "{\"body\":\"$COMMENT\"}"
